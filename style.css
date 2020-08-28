@@ -1,0 +1,93 @@
+body{
+    background-color: rgb(248, 233, 233);
+    background-image: url("./background.jpg");
+    background-position: top bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+}
+#mobile{
+    display: none;
+}
+#desktop h1{
+    font-size: 45px;
+    position: relative;
+    top: 280px;
+    left: 100px;
+    transition: all 300ms ease 0.15s;
+    color: goldenrod;
+}
+#desktop h1:hover{
+    color: #070707;
+    cursor: pointer;
+}
+#desktop p,
+#desktop p a{
+    color: white;
+    font-size: 10px;
+    text-align: right;
+}
+#desktop p{
+    position: relative;
+    top: 215px;
+}
+#desktop p a{
+    transition: all 300ms ease 0.15s;
+}
+#desktop p a:hover{
+    color: goldenrod;
+}
+@media only screen and (max-width: 450px){
+    body{
+        background-image: url("./mobile-background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+        width: 100%;
+    }
+    #desktop{
+        display: none;
+    }
+    #mobile{
+        position: relative;
+        display: inline-block;
+    }
+    
+    #mobile h1{
+        font-size: 20px;
+        position: relative;
+        top: 200px;
+        left: 98px;
+        transition: all 300ms ease 0.15s;
+        color: whitesmoke;
+        letter-spacing: 2px;
+    }
+    #mobile h1:hover{
+        cursor: pointer;
+    }
+    #mobile span{
+        transition: all 250ms ease-in-out 0.2s;
+        color: white;
+        text-decoration: underline;
+    }
+    #mobile span:hover{
+        color: goldenrod;
+        cursor: pointer;
+    }
+    #mobile p{
+        font-size: 10px;
+        position: relative;
+        top: 450px;
+        left: 140px;
+        color: white;
+    }
+    #mobile p a{
+        color: white;
+        transition: all 250ms ease-in-out 0.2s;
+    }
+    #mobile p a:hover{
+        color: goldenrod;
+    }
+
+}

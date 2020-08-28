@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Ball</title>
+    <!--<script src="./code.js"></script>-->
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="desktop">
+      <h1><strong>Let's</strong> get started ...</h1>
+      <p>👩‍💻 coded by <a href="https://lucy4788.github.io/porfolio/" target="_blank">Trang Vo</a></p>
+    </div>
+ 
+    <div id="mobile">
+      <h1>Let's get <span>started</span></h1>
+      <p>👩‍💻 coded by <a href="https://lucy4788.github.io/porfolio/" target="_blank">Trang Vo</a></p>
+    </div>
+
+<script>
+    function eightBall(){
+  alert("Welcome to the 8-Ball game 👋");
+  let userName = prompt("What's your name?");
+  if (userName.length > 0){
+    alert(`Hello, ${userName}!`);
+  } else {
+    alert(`Hello there!`);
+  }
+  
+  const userQuestion = prompt("What would you like to ask THE 8-BALL?");
+  
+  alert (`Your question is : ${userQuestion}`); //Step 4
+  alert ("And the answer is...");
+  
+  const randomNumber = Math.floor(Math.random() * 8);
+  let eightBall = "";
+  
+  switch (randomNumber){
+    case 0:
+    eightBall = "It is certain 🤗";
+    break;
+    case 1:
+    eightBall = "It is decidedly so 🤨";
+    break;
+    case 2:
+    eightBall = "Reply hazy try again 😓";
+    break;
+    case 3:
+    eightBall = "Cannot predict now 🤷‍♀️";
+    break;
+    case 4:
+    eightBall = "Do not count on it 🙅‍♀️";
+    break;
+    case 5:
+    eightBall = "My sources say no 🤯";
+    break;
+    case 6:
+    eightBall = "Outlook not so good 😐";
+    break;
+    case 7:
+    eightBall = "Signs point to yes 🤩";
+    break;
+    case 8:
+    eightBall = "Bad idea, think again! 😲";
+    break;
+    default:
+    eighBall = "Why would you want to? 🙄";
+    break;
+    }
+  alert(`${eightBall}`);
+}
+let askButton = document.querySelector("h1");
+askButton.addEventListener("click", eightBall);
+</script>
+</body>
+</html>
